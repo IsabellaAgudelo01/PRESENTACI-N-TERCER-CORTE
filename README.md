@@ -25,8 +25,7 @@ at(i): Muestra el elemento que está en la posición i
 
 La librería < deque > es usada genetalmente para casos de procesamiento de datos a tiempo real (por ejemplo si se leen datos y se necesita constantemente eliminar los más antiguos y agregar los nuevos), navegadores, historial, programas donde el orden es esencial y estructuras tipo cola que buscan una flexibilidad extra.
 
-```
-c++
+```c++
 #include <iostream>
 #include <deque>
 using namespace std;
