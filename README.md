@@ -25,6 +25,7 @@ at(i): Muestra el elemento que está en la posición i
 
 La librería < deque > es usada genetalmente para casos de procesamiento de datos a tiempo real (por ejemplo si se leen datos y se necesita constantemente eliminar los más antiguos y agregar los nuevos), navegadores, historial, programas donde el orden es esencial y estructuras tipo cola que buscan una flexibilidad extra.
 
+# Ejemplos
 ```c++
 #include <iostream>
 #include <deque>
@@ -32,14 +33,48 @@ using namespace std;
 
 int main()
 {
-    deque<int> numeros; //aquí definimos el deque, funciona parecido a una lista
-    numeros.push_back(1);
-    numeros.push_back(5);
-    numeros.push_front(7);
+    deque<int> numeros; //definimos el deque
+    //insertamos los elementos
+    numeros.push_back(1); // [1]
+    numeros.push_back(5); // [1,, 5]
+    numeros.push_front(7); // [7, 1, 5]
     cout << "Primer número: " << numeros.front() << endl;
     numeros.pop_front();
     cout << "El número que sigue es: " << numeros.front() << endl;
-
+    numeros.pop_front();
+    cout << "El número faltante es: " << numeros.front();
     return 0;
 }
 ```
+
+```c++
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main()
+{
+    deque<int> numeros; // definimos el deque
+    // asignamos los elementos
+    numeros.push_front(40); // [40]
+    numeros.push_back(60); // [40, 60]
+    numeros.push_front(70); // [70, 40, 60]
+    numeros.push_back(30); // [70, 40, 60, 30]
+    
+    cout << "contenido del deque: ";
+    for (int i = 0; i < numeros.size(); i++){
+        cout << numeros.at(i) << " ";
+    }
+    cout << endl;
+    numeros.pop_front(); //elimina 70
+    numeros.pop_back(); //elimina 30
+    cout << "Después de eliminar los extremos: ";
+    for (int i = 0; i < numeros.size(); i++){
+        cout << numeros.at(i) << " ";
+    }
+    return 0;
+}
+```
+
+
+
