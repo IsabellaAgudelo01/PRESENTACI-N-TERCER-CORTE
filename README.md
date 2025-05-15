@@ -77,6 +77,65 @@ int main()
     return 0;
 }
 ```
+_Ejemplo 3_
+```c++
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main(){
+    deque<int> lista;
+    int o;
+    while (true) {
+        cout << "Sistema de vacunación\n";
+        cout << "1. Registrar persona\n";
+        cout << "2. Atender siguiente persona en la lista\n";
+        cout << "3. Ver lista de espera\n";
+        cout << "4. Salir\n";
+        cout << "Elige una opción: ";
+        cin >> o;
+        if (o==1){
+            int e;
+            cout << "Ingrese la edad de la persona: ";
+            cin >> e;
+            if (e>60){
+                lista.push_front(e);
+                cout << "Persona con prioridad agregada a la lista de espera\n";
+            } else {
+                lista.push_back(e);
+                cout << "Persona sin prioridad agregada a la lista de espera\n";
+            }
+        } else if (o==2){
+            if(lista.empty()){
+                cout << "No hay personas en la lista\n";
+            } else {
+                cout << "Atendiendo persona de " << lista.front() << " años\n";
+                lista.pop_front();
+            }
+        } else if (o==3){
+            if(lista.empty()){
+                cout << "La lista está vacía\n";
+            } else {
+                cout << "Personas en la lista de espera (en orden de prioridad):\n";
+                for (int i = 0; i < lista.size(); i++){
+                    cout << i + 1 << ". Edad: " << lista.at(i) << endl;
+                    if (lista.at(i) > 60) {
+                        cout << " (Prioridad)";
+                    }
+                    cout << endl;
+                }
+            }
+        } else if (o>4){
+            cout << "Opción inválida\n";
+        } else {
+            cout << "Saliendo del programa...";
+            break;
+        }
+    }
+    return 0;
+}
+```
+
 
 
 
