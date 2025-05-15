@@ -1,29 +1,43 @@
 # PRESENTACION-TERCER-CORTE
 Isabella Agudelo Rodríguez, Santiago Trujillo Murillo
 # Introducción
-La librería < deque > es una estructura de datos llamada double-ended queue (cola de doble extremo). Proporciona una forma especial de organizar y guardar información, similar a lo que permiten otras estructuras como < queue > o list, pero con una mayor versatilidad. A diferencia de estas, < deque > ofrece acceso aleatorio rápido y permite realizar operaciones dinámicas tanto al principio como al final de la cola. Si se busca que un programa tenga mayor flexibilidad en el manejo de datos sin sacrificar rendimiento, esta librería es una excelente opción. En este documento se analizarán sus principales funcionalidades, ventajas, desventajas y ejemplos de uso, con el fin de explicar, comprender y aplicar sus conceptos en nuestro proceso de aprendizaje en programación con C++.
+La librería < deque > en C++ implementa una estructura de datos llamada double-ended queue (cola de doble extremo). Esta estructura permite almacenar y organizar información con la particularidad de que se pueden agregar o eliminar elementos tanto al inicio como al final de la secuencia, lo que le da una gran flexibilidad frente a otras estructuras como < queue > o list.
+
+A diferencia de estas, < deque > ofrece acceso aleatorio rápido y operaciones dinámicas en ambos extremos, lo cual la convierte en una opción eficiente cuando se necesita manipular datos en tiempo real sin sacrificar rendimiento. En este documento se presentarán sus principales funcionalidades, ventajas, desventajas y algunos ejemplos de uso para fortalecer el proceso de aprendizaje en programación con C++.
 # Funciones Principales
-Como ya se había mencionado anteriormente, la librería < deque > posee unas funciones y comandos que ayudan a la versatilidad del programa, a continuación se podrá ver la información con el nombre de las funciones y para qué sirven. 
+La librería < deque > incluye diversas funciones que permiten trabajar con los datos de forma versátil. A continuación, se describen las principales y su propósito:
 
-push_back(x): Agrega el número x al final
+push_back(x): Agrega el valor x al final del deque.
 
-push_front(x): Agrega el número x al principio
+push_front(x): Agrega el valor x al principio del deque.
 
-pop_back(): Quita el elemento que está al final
+pop_back(): Elimina el último elemento del deque.
 
-pop_front(): Quita el elemento que está al principio
+pop_front(): Elimina el primer elemento del deque.
 
-front(): Devuelve el primer elemento (sin quitarlo)
+front(): Devuelve el primer elemento sin eliminarlo.
 
-back(): Devuelve el último elemento (sin quitarlo)
+back(): Devuelve el último elemento sin eliminarlo.
 
-size(): Dice cuántos elementos hay
+size(): Retorna el número total de elementos.
 
-empty(): Dice si el deque está vacío
+empty(): Indica si el deque está vacío.
 
-at(i): Muestra el elemento que está en la posición i
+at(i): Accede al elemento en la posición i (comenzando desde 0).
 
-La librería < deque > es usada genetalmente para casos de procesamiento de datos a tiempo real (por ejemplo si se leen datos y se necesita constantemente eliminar los más antiguos y agregar los nuevos), navegadores, historial, programas donde el orden es esencial y estructuras tipo cola que buscan una flexibilidad extra.
+Estas funciones permiten un control muy preciso sobre la estructura, ideal para programas que requieren operaciones dinámicas y eficientes.
+# Usos comúnes
+La estructura < deque > se utiliza frecuentemente en aplicaciones donde se necesita:
+
+1. Procesar datos en tiempo real (por ejemplo, leer datos constantemente y reemplazar los antiguos).
+
+2. Implementar listas de espera o colas con prioridad simple.
+
+3. Controlar historiales de navegación o acciones recientes en un sistema.
+
+4. Simular estructuras complejas donde el orden de entrada y salida de datos es relevante pero cambiante.
+
+
 
 # Ejemplos
 _Ejemplo 1_
@@ -141,14 +155,22 @@ int main(){
 ```
 # Ventajas y desventajas
 # _Ventajas_
-La librería < deque > posee comodidades tales como el ingresar datos tanto al inicio como al final de la estructura de una forma eficiente, contiene operaciones que facilitan el acceso a cualquier elemento y tiene una capacidad de almacenar datos sin necesidad de definir el tamaño del deque dando así una mejor flexibilidad a la hora de programar.
+- Permite insertar y eliminar elementos tanto al principio como al final con alta eficiencia.
+
+- Ofrece acceso directo a cualquier elemento mediante su posición.
+
+- Se ajusta dinámicamente: no requiere definir un tamaño fijo desde el inicio.
 # _Desventajas_
-En ciertos casos, esta librería supone un problema para el rendimiento del código pues utiliza bloques de memoria separados, no posee funciones internas para ordenar automáticamente los datos y en caso de querer recorrer todos los elementos muchas veces puede que no sea la librería más eficiente.
+- Su manejo interno con bloques de memoria puede hacerla menos eficiente que vector para recorridos largos y repetitivos.
+
+- No incluye funciones integradas para ordenar los datos.
+
+- Algunas operaciones avanzadas que dependen de memoria contigua o punteros directos no son compatibles.
 
 # Conclusión
-La librería < deque > en C++ es una herramienta bastante útil si se requiere manejar colecciones de datos con mayor flexibilidad en ambos extremos de la estructura. A diferencia de otros contenedores más básicos, < deque > permite modificar elementos al inicio o al final de una forma eficiente, los programas que requieran un manejo de prioridades o cambios dinámicos en el flujo de datos aprovechan bastante bien esta librería. A pesar de las ventajas que conlleva la complejidad de este contenedor, también trae desventajas a la hora de recorrer muchos elementos seguidos o realizar operaciones muy específicas con punteros, a pesar de esto, < deque > es excelente para que los principiantes comprendan y aprendan a manejar los datos de manera más avanzada en C++.
-Esta librería no solo permite escribir programas más ordenados y funcionales, sino que ayuda a un pensamiento más amplio a la hora de la resolución de problemas.
+La librería < deque > es una herramienta muy útil para manejar datos con flexibilidad en ambos extremos de una estructura. Es especialmente práctica en casos donde se requiere modificar el orden de entrada y salida de elementos de forma eficiente. Aunque presenta algunas limitaciones en operaciones muy específicas o recorridos largos, su facilidad de uso y potencia la convierten en una excelente opción para estudiantes que desean avanzar en el manejo de estructuras dinámicas en C++.
 
+El aprendizaje de < deque > no solo permite desarrollar programas más organizados, sino que también ayuda a adquirir una visión más amplia para resolver problemas mediante una mejor gestión de los datos.
 
 
 
