@@ -139,6 +139,16 @@ int main(){
     return 0;
 }
 ```
+# Ventajas y desventajas
+# _Ventajas_
+La librería < deque > posee comodidades tales como el ingresar datos tanto al inicio como al final de la estructura de una forma eficiente, contiene operaciones que facilitan el acceso a cualquier elemento y tiene una capacidad de almacenar datos sin necesidad de definir el tamaño del deque dando así una mejor flexibilidad a la hora de programar.
+# _Desventajas_
+En ciertos casos, esta librería supone un problema para el rendimiento del código pues utiliza bloques de memoria separados, no posee funciones internas para ordenar automáticamente los datos y en caso de querer recorrer todos los elementos muchas veces puede que no sea la librería más eficiente.
+
+# Conclusión
+La librería < deque > en C++ es una herramienta bastante útil si se requiere manejar colecciones de datos con mayor flexibilidad en ambos extremos de la estructura. A diferencia de otros contenedores más básicos, < deque > permite modificar elementos al inicio o al final de una forma eficiente, los programas que requieran un manejo de prioridades o cambios dinámicos en el flujo de datos aprovechan bastante bien esta librería. A pesar de las ventajas que conlleva la complejidad de este contenedor, también trae desventajas a la hora de recorrer muchos elementos seguidos o realizar operaciones muy específicas con punteros, a pesar de esto, < deque > es excelente para que los principiantes comprendan y aprendan a manejar los datos de manera más avanzada en C++.
+Esta librería no solo permite escribir programas más ordenados y funcionales, sino que ayuda a un pensamiento más amplio a la hora de la resolución de problemas.
+
 
 
 
