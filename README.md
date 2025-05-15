@@ -86,7 +86,8 @@ using namespace std;
 int main(){
     deque<int> lista;
     int o;
-    while (true) {
+    //bucle principal del programa
+    while (true) { 
         cout << "Sistema de vacunación\n";
         cout << "1. Registrar persona\n";
         cout << "2. Atender siguiente persona en la lista\n";
@@ -99,18 +100,19 @@ int main(){
             cout << "Ingrese la edad de la persona: ";
             cin >> e;
             if (e>60){
-                lista.push_front(e);
+                //Persona mayor a 60 con prioridad
+                lista.push_front(e); //se agrega al inicio de la lista
                 cout << "Persona con prioridad agregada a la lista de espera\n";
             } else {
-                lista.push_back(e);
+                lista.push_back(e); //en caso de ser menor a 60 se agrega al final de la lista
                 cout << "Persona sin prioridad agregada a la lista de espera\n";
             }
         } else if (o==2){
             if(lista.empty()){
                 cout << "No hay personas en la lista\n";
             } else {
-                cout << "Atendiendo persona de " << lista.front() << " años\n";
-                lista.pop_front();
+                cout << "Atendiendo persona de " << lista.front() << " años\n"; //mostrar persona al inicio de la lista
+                lista.pop_front(); //quitar persona al inicio de la lista
             }
         } else if (o==3){
             if(lista.empty()){
@@ -118,8 +120,10 @@ int main(){
             } else {
                 cout << "Personas en la lista de espera (en orden de prioridad):\n";
                 for (int i = 0; i < lista.size(); i++){
+                    //mostrar cada persona de la lista con su posición
                     cout << i + 1 << ". Edad: " << lista.at(i) << endl;
                     if (lista.at(i) > 60) {
+                        //mostrar si tiene prioridad
                         cout << " (Prioridad)";
                     }
                     cout << endl;
